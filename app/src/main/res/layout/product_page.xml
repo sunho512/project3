@@ -5,202 +5,234 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="match_parent"
+        app:layout_constraintBaseline_toBottomOf="@id/bottomlayout"
+        app:layout_constraintBaseline_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/sample1" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:srcCompat="@drawable/person" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D8CECE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/pname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:text="사람이름"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/name22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/pname"
+                app:layout_constraintTop_toBottomOf="@+id/pname" />
+
+            <ImageView
+                android:id="@+id/merong"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:srcCompat="@drawable/merong" />
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="12.3°C"
+                android:textColor="#1542E4"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/merong"
+                app:layout_constraintEnd_toStartOf="@+id/merong"
+                app:layout_constraintTop_toTopOf="@+id/merong" />
+
+            <TextView
+                android:id="@+id/asdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="매너온도"
+                android:textColor="#BCB7B7"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/name11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="제품이름"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/subex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="제품설명"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/name11"
+                app:layout_constraintTop_toBottomOf="@+id/name11" />
+
+            <TextView
+                android:id="@+id/subcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="제품 색"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subex" />
+
+            <TextView
+                android:id="@+id/subsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제품사이즈"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/subcolor"
+                app:layout_constraintTop_toBottomOf="@+id/subcolor" />
+
+            <TextView
+                android:id="@+id/subconfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제품 구성"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@+id/subsize"
+                app:layout_constraintTop_toBottomOf="@+id/subsize" />
+
+            <TextView
+                android:id="@+id/subex2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="급처해요~\n adsfa \n asdf\n asd \n asdf"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@+id/subconfig"
+                app:layout_constraintTop_toBottomOf="@+id/subconfig" />
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3"
+                android:clickable="true"
+                android:onClick="onBackButtonClick"
+                app:srcCompat="@drawable/back" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomlayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/person" />
+        <TextView
+            android:id="@+id/asdf1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#D8CECE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/price11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="가격(원)"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/heartimg2"
+            app:layout_constraintStart_toEndOf="@+id/heartimg2"
+            app:layout_constraintTop_toTopOf="@+id/heartimg2" />
 
-    <TextView
-        android:id="@+id/pname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:text="사람이름"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        <ImageView
+            android:id="@+id/heartimg2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/asdf1"
+            app:srcCompat="@drawable/heart" />
 
-    <TextView
-        android:id="@+id/name22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="주소"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/pname"
-        app:layout_constraintTop_toBottomOf="@+id/pname" />
-
-    <ImageView
-        android:id="@+id/merong"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/merong" />
-
-    <TextView
-        android:id="@+id/temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:text="12.3°C"
-        android:textColor="#1542E4"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/merong"
-        app:layout_constraintEnd_toStartOf="@+id/merong"
-        app:layout_constraintTop_toTopOf="@+id/merong" />
-
-    <TextView
-        android:id="@+id/asdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:text="매너온도"
-        android:textColor="#BCB7B7"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/asdf1"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/price11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="가격(원)"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/heartimg2"
-        app:layout_constraintStart_toEndOf="@+id/heartimg2"
-        app:layout_constraintTop_toTopOf="@+id/heartimg2" />
-
-    <ImageView
-        android:id="@+id/heartimg2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/asdf1"
-        app:srcCompat="@drawable/heart" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/chatbt"
-        android:layout_width="90dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/teduri1"
-        android:text="채팅하기"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/asdf1"
-        app:layout_constraintEnd_toEndOf="@+id/asdf1"
-        app:layout_constraintTop_toTopOf="@+id/asdf1" />
-
-    <TextView
-        android:id="@+id/name11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="제품이름"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/subex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="제품설명"
-        android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="@+id/name11"
-        app:layout_constraintTop_toBottomOf="@+id/name11" />
-
-    <TextView
-        android:id="@+id/subcolor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="제품 색"
-        android:textSize="18sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subex" />
-
-    <TextView
-        android:id="@+id/subsize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="제품사이즈"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/subcolor"
-        app:layout_constraintTop_toBottomOf="@+id/subcolor" />
-
-    <TextView
-        android:id="@+id/subconfig"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="제품 구성"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="@+id/subsize"
-        app:layout_constraintTop_toBottomOf="@+id/subsize" />
-
-    <TextView
-        android:id="@+id/subex2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="급처해요~"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="@+id/subconfig"
-        app:layout_constraintTop_toBottomOf="@+id/subconfig" />
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chatbt"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/teduri1"
+            android:text="채팅하기"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/asdf1"
+            app:layout_constraintEnd_toEndOf="@+id/asdf1"
+            app:layout_constraintTop_toTopOf="@+id/asdf1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

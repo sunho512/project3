@@ -1,8 +1,10 @@
 package j.project3
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.customitemview.MyAdapter
@@ -40,7 +42,22 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(view: View, position: Int) {
                 val name: String = dataList[position].name1
                 Toast.makeText(this@MainActivity," $name 선택", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, ProductPage::class.java)
+                startActivity(intent)
             }
         }
+    }
+    override fun onBackPressed() {
+        val alertDialog = AlertDialog.Builder(this)
+            .setIcon(R.drawable.chat)
+            .setTitle("종료")
+            .setMessage("정말 종료 하시겠습니까?")
+            .setPositiveButton("확인") { _, _ ->
+                super.finish()
+            }
+            .setNegativeButton("취소", null)
+            .create()
+
+        alertDialog.show()
     }
 }
